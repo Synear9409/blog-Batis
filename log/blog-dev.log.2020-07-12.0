@@ -1,0 +1,295 @@
+2020-07-12 21:00:09.093  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Starting BlogApplication on Look-at-me with PID 3536 (E:\Users\Shinelon\IdeaProjects\blog-Batis\target\classes started by Shinelon in E:\Users\Shinelon\IdeaProjects\blog-Batis)
+2020-07-12 21:00:09.123 DEBUG 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-12 21:00:09.124  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : The following profiles are active: dev
+2020-07-12 21:00:09.269  INFO 3536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-12 21:00:09.270  INFO 3536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-12 21:00:13.662  INFO 3536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-12 21:00:13.677  INFO 3536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-12 21:00:13.677  INFO 3536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-12 21:00:14.050  INFO 3536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-12 21:00:14.050  INFO 3536 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4780 ms
+2020-07-12 21:00:15.447  INFO 3536 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-12 21:00:15.599  INFO 3536 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-12 21:00:17.592  INFO 3536 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-12 21:00:18.000  INFO 3536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-12 21:00:18.017  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Started BlogApplication in 10.953 seconds (JVM running for 13.207)
+2020-07-12 21:01:10.339  INFO 3536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-12 21:01:10.339  INFO 3536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-12 21:01:10.370  INFO 3536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2020-07-12 21:01:18.029  WARN 3536 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [657] milliseconds.
+2020-07-12 21:01:18.159  INFO 3536 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-12 21:01:18.557  INFO 3536 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-12 21:01:18.571 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.b.d.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?; 
+2020-07-12 21:01:18.792 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.b.d.U.findByUsernameAndPassword      : ==> Parameters: Synear(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-07-12 21:01:18.836 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.b.d.U.findByUsernameAndPassword      : <==      Total: 1
+2020-07-12 21:01:21.518 DEBUG 3536 --- [http-nio-8080-exec-10] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id 
+2020-07-12 21:01:21.518 DEBUG 3536 --- [http-nio-8080-exec-10] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==> Parameters: 
+2020-07-12 21:01:21.555 DEBUG 3536 --- [http-nio-8080-exec-10] c.c.blog.dao.BlogDao.getBlogs_COUNT      : <==      Total: 1
+2020-07-12 21:01:21.555 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==>  Preparing: select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published, t.id typeid,t.name typename from t_blog b,t_type t where b.type_id = t.id LIMIT ? 
+2020-07-12 21:01:21.555 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==> Parameters: 5(Integer)
+2020-07-12 21:01:21.587 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.BlogDao.getBlogs    : <==      Total: 5
+2020-07-12 21:01:21.600 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:01:21.600 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:01:21.600 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:01:21.617 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:01:21.617 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:01:21.617 DEBUG 3536 --- [http-nio-8080-exec-10] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:01:26.415 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:01:26.417 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:01:26.424 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:01:26.427 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:01:26.428 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:01:26.432 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:01:39.982 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:01:39.983 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:01:39.986 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:01:39.987 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:01:39.988 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:01:39.991 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:02:17.976 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.TypeDao.getType     : ==>  Preparing: select id,name from t_type where id = ? 
+2020-07-12 21:02:17.976 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.TypeDao.getType     : ==> Parameters: 2(Long)
+2020-07-12 21:02:18.055 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.TypeDao.getType     : <==      Total: 1
+2020-07-12 21:02:18.072 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.TagDao.getTag       : ==>  Preparing: select id,name from t_tag where id = ? 
+2020-07-12 21:02:18.073 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.TagDao.getTag       : ==> Parameters: 3(Long)
+2020-07-12 21:02:18.075 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.TagDao.getTag       : <==      Total: 1
+2020-07-12 21:02:18.076 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.BlogDao.saveBlog    : ==>  Preparing: insert into t_blog (title, content, first_picture, flag, views, appreciation, share_statement, commendable,published, recommend, create_time, update_time, type_id, tag_ids, user_id, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); 
+2020-07-12 21:02:18.088 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.BlogDao.saveBlog    : ==> Parameters: 我的标题11(String), 1111(String), https://picsum.photos/id/1020/800/450(String), 原创(String), 0(Integer), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-07-12 21:02:18.076(Timestamp), 2020-07-12 21:02:18.076(Timestamp), 2(Long), 3(String), 1(Long), 11221(String)
+2020-07-12 21:02:18.190 DEBUG 3536 --- [http-nio-8080-exec-8] com.cxzjava.blog.dao.BlogDao.saveBlog    : <==    Updates: 1
+2020-07-12 21:02:18.193 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.blog.dao.BlogDao.saveBlogAndTag      : ==>  Preparing: insert into t_blog_tags (tags_id, blogs_id) values (?,?); 
+2020-07-12 21:02:18.193 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.blog.dao.BlogDao.saveBlogAndTag      : ==> Parameters: 3(Long), 12(Long)
+2020-07-12 21:02:18.239 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.blog.dao.BlogDao.saveBlogAndTag      : <==    Updates: 1
+2020-07-12 21:02:18.285 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id 
+2020-07-12 21:02:18.285 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==> Parameters: 
+2020-07-12 21:02:18.285 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.blog.dao.BlogDao.getBlogs_COUNT      : <==      Total: 1
+2020-07-12 21:02:18.295 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==>  Preparing: select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published, t.id typeid,t.name typename from t_blog b,t_type t where b.type_id = t.id LIMIT ? 
+2020-07-12 21:02:18.296 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==> Parameters: 5(Integer)
+2020-07-12 21:02:18.307 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.BlogDao.getBlogs    : <==      Total: 5
+2020-07-12 21:02:18.310 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:02:18.311 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:02:18.311 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:02:18.322 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:02:18.323 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:02:18.325 DEBUG 3536 --- [http-nio-8080-exec-1] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:02:26.587 DEBUG 3536 --- [http-nio-8080-exec-5] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id 
+2020-07-12 21:02:26.588 DEBUG 3536 --- [http-nio-8080-exec-5] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==> Parameters: 
+2020-07-12 21:02:26.593 DEBUG 3536 --- [http-nio-8080-exec-5] c.c.blog.dao.BlogDao.getBlogs_COUNT      : <==      Total: 1
+2020-07-12 21:02:26.594 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==>  Preparing: select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published, t.id typeid,t.name typename from t_blog b,t_type t where b.type_id = t.id LIMIT ?, ? 
+2020-07-12 21:02:26.595 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==> Parameters: 5(Integer), 5(Integer)
+2020-07-12 21:02:26.598 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlogs    : <==      Total: 2
+2020-07-12 21:02:26.600 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:02:26.601 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:02:26.604 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:02:26.606 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:02:26.607 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:02:26.608 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:02:30.861 DEBUG 3536 --- [http-nio-8080-exec-7] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id 
+2020-07-12 21:02:30.861 DEBUG 3536 --- [http-nio-8080-exec-7] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==> Parameters: 
+2020-07-12 21:02:30.870 DEBUG 3536 --- [http-nio-8080-exec-7] c.c.blog.dao.BlogDao.getBlogs_COUNT      : <==      Total: 1
+2020-07-12 21:02:30.871 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==>  Preparing: select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published, t.id typeid,t.name typename from t_blog b,t_type t where b.type_id = t.id LIMIT ? 
+2020-07-12 21:02:30.872 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==> Parameters: 5(Integer)
+2020-07-12 21:02:30.887 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.BlogDao.getBlogs    : <==      Total: 5
+2020-07-12 21:02:30.891 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:02:30.891 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:02:30.895 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:02:30.896 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:02:30.896 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:02:30.896 DEBUG 3536 --- [http-nio-8080-exec-7] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:04:39.050  INFO 3536 --- [Thread-173] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-12 21:04:39.051  INFO 3536 --- [Thread-173] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-12 21:04:39.075  INFO 3536 --- [Thread-173] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-12 21:04:39.270  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Starting BlogApplication on Look-at-me with PID 3536 (E:\Users\Shinelon\IdeaProjects\blog-Batis\target\classes started by Shinelon in E:\Users\Shinelon\IdeaProjects\blog-Batis)
+2020-07-12 21:04:39.270 DEBUG 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-12 21:04:39.271  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : The following profiles are active: dev
+2020-07-12 21:04:40.400  INFO 3536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-12 21:04:40.401  INFO 3536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-12 21:04:40.401  INFO 3536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-12 21:04:40.481  INFO 3536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-12 21:04:40.481  INFO 3536 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1207 ms
+2020-07-12 21:04:40.850  INFO 3536 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-12 21:04:40.879  INFO 3536 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-12 21:04:41.045  INFO 3536 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-12 21:04:41.068  INFO 3536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-12 21:04:41.072  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Started BlogApplication in 1.866 seconds (JVM running for 276.263)
+2020-07-12 21:04:41.074  INFO 3536 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-12 21:05:18.025  INFO 3536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-12 21:05:18.027  INFO 3536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-12 21:05:18.033  INFO 3536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-07-12 21:05:24.577  INFO 3536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-07-12 21:05:24.692  INFO 3536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-07-12 21:05:24.692 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.b.d.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?; 
+2020-07-12 21:05:24.694 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.b.d.U.findByUsernameAndPassword      : ==> Parameters: Synear(String), 6537e99af2c2223642df9f70a0b5afca(String)
+2020-07-12 21:05:24.703 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.b.d.U.findByUsernameAndPassword      : <==      Total: 0
+2020-07-12 21:05:29.915 DEBUG 3536 --- [http-nio-8080-exec-3] c.c.b.d.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?; 
+2020-07-12 21:05:29.916 DEBUG 3536 --- [http-nio-8080-exec-3] c.c.b.d.U.findByUsernameAndPassword      : ==> Parameters: Synear(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-07-12 21:05:29.917 DEBUG 3536 --- [http-nio-8080-exec-3] c.c.b.d.U.findByUsernameAndPassword      : <==      Total: 1
+2020-07-12 21:05:32.414 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==>  Preparing: select count(0) from (select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published, t.id typeid,t.name typename from t_blog b,t_type t where b.type_id = t.id desc) tmp_count 
+2020-07-12 21:05:32.415 DEBUG 3536 --- [http-nio-8080-exec-1] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==> Parameters: 
+2020-07-12 21:05:32.622 ERROR 3536 --- [http-nio-8080-exec-1] c.c.b.handle.controllerExceptionHandle   : Request URL : /admin/blog,Exception : {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5
+### The error may exist in file [E:\Users\Shinelon\IdeaProjects\blog-Batis\target\classes\mapper\BlogDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select count(0) from (select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published,         t.id typeid,t.name typename         from t_blog b,t_type t         where b.type_id = t.id         desc) tmp_count
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy67.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy95.getBlogs(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy96.getBlogs(Unknown Source)
+	at com.cxzjava.blog.service.BlogServiceImp.getAllBlog(BlogServiceImp.java:47)
+	at com.cxzjava.blog.controller.admin.BlogController.blog(BlogController.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at jdk.internal.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy91.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:138)
+	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:150)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:97)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy89.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at jdk.internal.reflect.GeneratedMethodAccessor85.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 69 common frames omitted
+
+2020-07-12 21:05:32.624  WARN 3536 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5
+### The error may exist in file [E:\Users\Shinelon\IdeaProjects\blog-Batis\target\classes\mapper\BlogDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select count(0) from (select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published,         t.id typeid,t.name typename         from t_blog b,t_type t         where b.type_id = t.id         desc) tmp_count
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc) tmp_count' at line 5]
+2020-07-12 21:07:02.429  INFO 3536 --- [Thread-176] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-12 21:07:02.429  INFO 3536 --- [Thread-176] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-07-12 21:07:02.431  INFO 3536 --- [Thread-176] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-07-12 21:07:02.497  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Starting BlogApplication on Look-at-me with PID 3536 (E:\Users\Shinelon\IdeaProjects\blog-Batis\target\classes started by Shinelon in E:\Users\Shinelon\IdeaProjects\blog-Batis)
+2020-07-12 21:07:02.498 DEBUG 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-12 21:07:02.498  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : The following profiles are active: dev
+2020-07-12 21:07:02.841  INFO 3536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-12 21:07:02.842  INFO 3536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-12 21:07:02.842  INFO 3536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-12 21:07:02.861  INFO 3536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-12 21:07:02.861  INFO 3536 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 361 ms
+2020-07-12 21:07:03.020  INFO 3536 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-12 21:07:03.040  INFO 3536 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-12 21:07:03.260  INFO 3536 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-12 21:07:03.275  INFO 3536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-12 21:07:03.281  INFO 3536 --- [restartedMain] com.cxzjava.blog.BlogApplication         : Started BlogApplication in 0.812 seconds (JVM running for 418.472)
+2020-07-12 21:07:03.282  INFO 3536 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-12 21:07:07.698  INFO 3536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-12 21:07:07.700  INFO 3536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-12 21:07:07.707  INFO 3536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-07-12 21:07:14.088  INFO 3536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-07-12 21:07:14.094  INFO 3536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-07-12 21:07:14.094 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.b.d.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?; 
+2020-07-12 21:07:14.095 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.b.d.U.findByUsernameAndPassword      : ==> Parameters: Synear(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-07-12 21:07:14.101 DEBUG 3536 --- [http-nio-8080-exec-8] c.c.b.d.U.findByUsernameAndPassword      : <==      Total: 1
+2020-07-12 21:07:16.165 DEBUG 3536 --- [http-nio-8080-exec-5] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id 
+2020-07-12 21:07:16.166 DEBUG 3536 --- [http-nio-8080-exec-5] c.c.blog.dao.BlogDao.getBlogs_COUNT      : ==> Parameters: 
+2020-07-12 21:07:16.232 DEBUG 3536 --- [http-nio-8080-exec-5] c.c.blog.dao.BlogDao.getBlogs_COUNT      : <==      Total: 1
+2020-07-12 21:07:16.240 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==>  Preparing: select b.id,b.title,b.update_time, b.recommend, b.type_id, b.published, t.id typeid,t.name typename from t_blog b,t_type t where b.type_id = t.id order by b.update_time desc LIMIT ? 
+2020-07-12 21:07:16.240 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlogs    : ==> Parameters: 5(Integer)
+2020-07-12 21:07:16.248 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlogs    : <==      Total: 5
+2020-07-12 21:07:16.261 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:07:16.261 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:07:16.265 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:07:16.274 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:07:16.275 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:07:16.282 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:07:24.600 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type 
+2020-07-12 21:07:24.601 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-07-12 21:07:24.603 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TypeDao.getAllType  : <==      Total: 8
+2020-07-12 21:07:24.604 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : ==>  Preparing: select * from t_tag 
+2020-07-12 21:07:24.604 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : ==> Parameters: 
+2020-07-12 21:07:24.608 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.TagDao.listTag      : <==      Total: 6
+2020-07-12 21:07:24.610 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlog     : ==>  Preparing: select b.id, b.published, b.flag, b.title, b.content, b.type_id, b.tag_ids, b.first_picture, b.description, b.recommend, b.share_statement, b.appreciation, b.commendable from t_blog b where b.id = ? 
+2020-07-12 21:07:24.610 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlog     : ==> Parameters: 12(Long)
+2020-07-12 21:07:24.617 DEBUG 3536 --- [http-nio-8080-exec-5] com.cxzjava.blog.dao.BlogDao.getBlog     : <==      Total: 1
