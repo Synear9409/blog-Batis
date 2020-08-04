@@ -4,9 +4,11 @@ package com.cxzjava.blog.pojo;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
-public class BlogAndTag {
+public class BlogAndTag{
 
     private Long tagsId;
     private Long blogsId;

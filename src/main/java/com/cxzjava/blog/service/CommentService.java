@@ -7,11 +7,9 @@ import java.util.List;
 
 public interface CommentService {
 
-    ///获取每个博客的评论列表
-    List<Comment> listCommentByBlogId(Long blogId);
+    List<Comment> listCommentByBlogId(Long blogId);     ///获取每个博客的评论列表
 
     List<Comment> listReplyComment(Long blogId);
 
-    //保存一个评论
-    int saveComment(Comment comment);
+    int saveComment(Comment comment);    //保存一个评论
 }

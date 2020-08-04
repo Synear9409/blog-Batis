@@ -3,6 +3,8 @@ package com.cxzjava.blog.service;
 import com.cxzjava.blog.dao.TagDao;
 import com.cxzjava.blog.pojo.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "tagCache")
 public class TagServiceImp implements TagService {
 
     @Autowired
@@ -35,6 +38,7 @@ public class TagServiceImp implements TagService {
     }
 
     @Override
+    @Cacheable(key = "methodName")
     public List<Tag> getAllTag() {
         return tagDao.getAllTag();
     }
@@ -60,6 +64,7 @@ public class TagServiceImp implements TagService {
      * @return*/
 
     @Override
+    @Cacheable(key = "methodName")
     public List<Tag> listBlogTag() {
         return tagDao.getBlogTag();
     }

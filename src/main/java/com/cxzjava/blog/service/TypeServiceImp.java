@@ -3,12 +3,15 @@ package com.cxzjava.blog.service;
 import com.cxzjava.blog.dao.TypeDao;
 import com.cxzjava.blog.pojo.Type;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "typeCache")
 public class TypeServiceImp implements TypeService {
 
     @Autowired
@@ -37,6 +40,7 @@ public class TypeServiceImp implements TypeService {
     }
 
     @Override
+    @Cacheable(key = "methodName")
     public List<Type> getAllType() {
         return typeDao.getAllType();
     }
@@ -47,6 +51,7 @@ public class TypeServiceImp implements TypeService {
      * @return*/
 
     @Override
+    @Cacheable(key = "methodName")
     public List<Type> listBlogType() {
         return typeDao.getBlogType();
     }

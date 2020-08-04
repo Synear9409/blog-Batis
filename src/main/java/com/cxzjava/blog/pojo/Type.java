@@ -6,13 +6,14 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @ToString
 @Getter
 @Setter
-public class Type {
+public class Type implements Serializable {
 
     private Long id;
     @NotBlank(message="分类名称不能为空")

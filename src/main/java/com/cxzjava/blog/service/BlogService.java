@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface BlogService {
 
-    Blog getBlog(Long id);
+    Blog getBlog(Long id);            ///后台编辑载入数据
 
     List<Blog> searchAllBlog(Blog blog);  //后台根据标题、分类、推荐搜索博客
 
@@ -15,9 +15,9 @@ public interface BlogService {
 
     List<Blog> getAllBlog();   ///后端博客列表
 
-    List<Blog> getBlogByTypeId(Long typeId);
+    List<Blog> getBlogByTypeId(Long typeId);   //前台分类项点击获取博客
 
-    List<Blog>  getBlogByTagId(Long tagId);
+    List<Blog>  getBlogByTagId(Long tagId);    //前台标签项点击获取博客
 
     List<Blog> getIndexBlog();  //主页博客展示
 
